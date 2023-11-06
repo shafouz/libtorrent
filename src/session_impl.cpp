@@ -605,7 +605,9 @@ bool ssl_server_name_callback(ssl::stream_handle_type stream_handle, std::string
 
 #if TORRENT_USE_SSL
 		error_code ec;
+#ifndef FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
 		m_ssl_ctx.set_default_verify_paths(ec);
+#endif
 #ifndef TORRENT_DISABLE_LOGGING
 		if (ec) session_log("SSL set_default verify_paths failed: %s", ec.message().c_str());
 		ec.clear();
