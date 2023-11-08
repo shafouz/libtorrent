@@ -77,6 +77,7 @@ fuzzer parse_url ;
 fuzzer http_tracker ;
 fuzzer session_params ;
 fuzzer add_torrent ;
+fuzzer write_torrent_file ;
 
 local LARGE_TARGETS =
 	torrent_info

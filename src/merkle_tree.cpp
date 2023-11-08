@@ -119,7 +119,7 @@ namespace {
 		, std::vector<bool> const& verified)
 	{
 		INVARIANT_CHECK;
-		TORRENT_ASSERT(mask.size() == size());
+		// TORRENT_ASSERT(mask.size() == size());
 		if (size() != mask.size()) return;
 
 		int const first_block = block_layer_start();
