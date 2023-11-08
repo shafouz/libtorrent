@@ -80,6 +80,7 @@ fuzzer add_torrent ;
 fuzzer write_torrent_file ;
 
 local LARGE_TARGETS =
+  write_torrent_file
 	torrent_info
 	bdecode_node
 	http_parser
